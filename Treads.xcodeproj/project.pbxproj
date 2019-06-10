@@ -32,6 +32,7 @@
 		B53485FE22AA4C0A00A314CD /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B53485EC22AA4C0A00A314CD /* Montserrat-SemiBoldItalic.ttf */; };
 		B53485FF22AA4C0A00A314CD /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B53485ED22AA4C0A00A314CD /* Montserrat-Thin.ttf */; };
 		B554BE5322AE39A700622D7C /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554BE5222AE39A700622D7C /* LocationVC.swift */; };
+		B554BE5522AE41E100622D7C /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554BE5422AE41E100622D7C /* CurrentRunVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		B53485EC22AA4C0A00A314CD /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		B53485ED22AA4C0A00A314CD /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		B554BE5222AE39A700622D7C /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		B554BE5422AE41E100622D7C /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				B53485C522AA49FB00A314CD /* BeginRunVC.swift */,
 				B53485C722AA49FB00A314CD /* RunLogVC.swift */,
 				B554BE5222AE39A700622D7C /* LocationVC.swift */,
+				B554BE5422AE41E100622D7C /* CurrentRunVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B554BE5522AE41E100622D7C /* CurrentRunVC.swift in Sources */,
 				B53485C822AA49FB00A314CD /* RunLogVC.swift in Sources */,
 				B554BE5322AE39A700622D7C /* LocationVC.swift in Sources */,
 				B53485C422AA49FB00A314CD /* AppDelegate.swift in Sources */,
