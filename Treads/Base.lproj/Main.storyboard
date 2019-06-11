@@ -175,13 +175,18 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-OV-S27">
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="WAj-nl-BGJ"/>
+                                    <constraint firstAttribute="height" constant="75" id="zUx-BJ-TZI"/>
+                                    <constraint firstAttribute="width" secondItem="EOI-OV-S27" secondAttribute="height" multiplier="1:1" id="zyc-EP-KTD"/>
+                                </constraints>
                                 <state key="normal" image="pauseButton"/>
                                 <connections>
                                     <action selector="pauseBtnPressed:" destination="UFY-rK-vAD" eventType="touchUpInside" id="b6R-vU-Fvu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRB-If-AkO">
-                                <rect key="frame" x="147.5" y="579.5" width="78.5" height="20"/>
+                                <rect key="frame" x="147" y="579.5" width="79" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -202,13 +207,14 @@
                             <constraint firstItem="5xS-vF-pnm" firstAttribute="trailing" secondItem="uj2-Du-B21" secondAttribute="trailing" id="KBX-Yl-zQa"/>
                             <constraint firstAttribute="trailing" secondItem="QQX-xC-93k" secondAttribute="trailing" id="N9Z-X5-aOD"/>
                             <constraint firstItem="I6g-tP-w3E" firstAttribute="leading" secondItem="uj2-Du-B21" secondAttribute="leading" constant="20" id="QWY-nf-rAP"/>
-                            <constraint firstItem="EOI-OV-S27" firstAttribute="leading" secondItem="DEC-3D-Kxj" secondAttribute="trailing" constant="-23.5" id="QxD-RK-vtI"/>
                             <constraint firstItem="Z14-dU-OO0" firstAttribute="centerX" secondItem="QQX-xC-93k" secondAttribute="centerX" id="QxK-sD-f5O"/>
                             <constraint firstItem="QyB-m4-HNe" firstAttribute="centerY" secondItem="DEC-3D-Kxj" secondAttribute="centerY" id="Rwg-52-5cM"/>
                             <constraint firstItem="5Cj-VW-Lk5" firstAttribute="top" secondItem="uj2-Du-B21" secondAttribute="top" constant="8" id="Sbw-1t-qHM"/>
+                            <constraint firstItem="EOI-OV-S27" firstAttribute="leading" secondItem="TRB-If-AkO" secondAttribute="trailing" constant="28" id="WwO-fJ-Yog"/>
                             <constraint firstItem="TRB-If-AkO" firstAttribute="centerX" secondItem="DEC-3D-Kxj" secondAttribute="centerX" constant="25" id="aUe-MI-yBe"/>
                             <constraint firstItem="uj2-Du-B21" firstAttribute="bottom" secondItem="DEC-3D-Kxj" secondAttribute="bottom" constant="40" id="bNB-Vb-7kk"/>
                             <constraint firstItem="fjB-ge-mrA" firstAttribute="centerX" secondItem="4jj-Np-njX" secondAttribute="centerX" id="eAn-tj-2hE"/>
+                            <constraint firstItem="EOI-OV-S27" firstAttribute="leading" secondItem="DEC-3D-Kxj" secondAttribute="trailing" constant="-23.5" id="ebG-yv-F6H"/>
                             <constraint firstItem="fjB-ge-mrA" firstAttribute="top" secondItem="5Cj-VW-Lk5" secondAttribute="bottom" constant="36" id="edB-8t-n0D"/>
                             <constraint firstItem="QQX-xC-93k" firstAttribute="top" secondItem="fjB-ge-mrA" secondAttribute="bottom" constant="42.5" id="fAx-Xg-Mju"/>
                             <constraint firstItem="I6g-tP-w3E" firstAttribute="top" secondItem="Z14-dU-OO0" secondAttribute="bottom" constant="77" id="nj0-Z3-WxZ"/>
