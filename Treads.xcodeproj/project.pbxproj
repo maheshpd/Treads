@@ -36,6 +36,7 @@
 		B554BE5522AE41E100622D7C /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554BE5422AE41E100622D7C /* CurrentRunVC.swift */; };
 		B554BE5722AF794300622D7C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554BE5622AF794300622D7C /* Extensions.swift */; };
 		B554BE5922AF95ED00622D7C /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554BE5822AF95ED00622D7C /* Run.swift */; };
+		B554BE5B22AF9CBB00622D7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B554BE5A22AF9CBB00622D7C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		B554BE5422AE41E100622D7C /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		B554BE5622AF794300622D7C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B554BE5822AF95ED00622D7C /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		B554BE5A22AF9CBB00622D7C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8A1AD3558DD3D017171A71D /* Pods_Treads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE87E06BD2B0153594B2D698 /* Pods-Treads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treads.release.xcconfig"; path = "Target Support Files/Pods-Treads/Pods-Treads.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 		B53485D922AA4B9100A314CD /* Utillities */ = {
 			isa = PBXGroup;
 			children = (
+				B554BE5A22AF9CBB00622D7C /* Constants.swift */,
 			);
 			path = Utillities;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				B53485C422AA49FB00A314CD /* AppDelegate.swift in Sources */,
 				B554BE5922AF95ED00622D7C /* Run.swift in Sources */,
 				B53485C622AA49FB00A314CD /* BeginRunVC.swift in Sources */,
+				B554BE5B22AF9CBB00622D7C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
