@@ -22,6 +22,7 @@ class CurrentRunVC: LocationVC {
     var timer = Timer()
     
     var runDistance = 0.0
+    var pace = 0
     var counter = 0
     
     override func viewDidLoad() {
@@ -59,12 +60,13 @@ class CurrentRunVC: LocationVC {
         durationLbl.text = counter.formatTimeDurationToString()
     }
     
+    func calculatePace(time second: Int, km: Double) -> String {
+       pace = Int(Double(second) / km)
+        return pace.formatTimeDurationToString()
+    }
     
     @IBAction func pauseBtnPressed(_ sender: UIButton) {
     }
-    
-    
-    
     
     @objc func endRunSwiped(sender: UIPanGestureRecognizer) {
         let minAdjust: CGFloat = 80
@@ -108,6 +110,9 @@ extension CurrentRunVC: CLLocationManagerDelegate {
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
             distanceLbl.text = "\(runDistance.metersToKm(place: 3))"
+            if counter > 0 && runDistance > 0 {
+                paceLbl.text = calculatePace(time: counter, km: runDistance.metersToKm(place: 2))
+            }
         }
         lastLocation = locations.last
     }
