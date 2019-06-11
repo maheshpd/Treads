@@ -139,19 +139,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I6g-tP-w3E">
-                                <rect key="frame" x="148" y="384" width="79" height="63"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I6g-tP-w3E">
+                                <rect key="frame" x="20" y="384" width="335" height="63"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFx-0J-FMq">
-                                        <rect key="frame" x="3.5" y="0.0" width="75.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFx-0J-FMq">
+                                        <rect key="frame" x="20" y="0.0" width="295" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="uhj-GR-8vn">
-                                        <rect key="frame" x="5.5" y="26" width="73.5" height="37"/>
+                                        <rect key="frame" x="131" y="26" width="73.5" height="37"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtG-9L-UM6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtG-9L-UM6">
                                                 <rect key="frame" x="0.0" y="0.0" width="47" height="37"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,6 +166,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="vFx-0J-FMq" firstAttribute="leading" secondItem="I6g-tP-w3E" secondAttribute="leading" constant="20" id="aLH-dG-CHR"/>
+                                </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunOutline" translatesAutoresizingMaskIntoConstraints="NO" id="DEC-3D-Kxj">
                                 <rect key="frame" x="45.5" y="552" width="232" height="75"/>
@@ -173,6 +176,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-OV-S27">
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="UFY-rK-vAD" eventType="touchUpInside" id="b6R-vU-Fvu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRB-If-AkO">
                                 <rect key="frame" x="147.5" y="579.5" width="78.5" height="20"/>
@@ -195,7 +201,7 @@
                             <constraint firstItem="DEC-3D-Kxj" firstAttribute="leading" secondItem="QyB-m4-HNe" secondAttribute="trailing" constant="-65.5" id="J0S-6m-2gx"/>
                             <constraint firstItem="5xS-vF-pnm" firstAttribute="trailing" secondItem="uj2-Du-B21" secondAttribute="trailing" id="KBX-Yl-zQa"/>
                             <constraint firstAttribute="trailing" secondItem="QQX-xC-93k" secondAttribute="trailing" id="N9Z-X5-aOD"/>
-                            <constraint firstItem="I6g-tP-w3E" firstAttribute="leading" secondItem="uj2-Du-B21" secondAttribute="leading" constant="148" id="QWY-nf-rAP"/>
+                            <constraint firstItem="I6g-tP-w3E" firstAttribute="leading" secondItem="uj2-Du-B21" secondAttribute="leading" constant="20" id="QWY-nf-rAP"/>
                             <constraint firstItem="EOI-OV-S27" firstAttribute="leading" secondItem="DEC-3D-Kxj" secondAttribute="trailing" constant="-23.5" id="QxD-RK-vtI"/>
                             <constraint firstItem="Z14-dU-OO0" firstAttribute="centerX" secondItem="QQX-xC-93k" secondAttribute="centerX" id="QxK-sD-f5O"/>
                             <constraint firstItem="QyB-m4-HNe" firstAttribute="centerY" secondItem="DEC-3D-Kxj" secondAttribute="centerY" id="Rwg-52-5cM"/>
@@ -208,6 +214,7 @@
                             <constraint firstItem="I6g-tP-w3E" firstAttribute="top" secondItem="Z14-dU-OO0" secondAttribute="bottom" constant="77" id="nj0-Z3-WxZ"/>
                             <constraint firstItem="TRB-If-AkO" firstAttribute="centerY" secondItem="DEC-3D-Kxj" secondAttribute="centerY" id="pZT-m3-3RZ"/>
                             <constraint firstItem="5xS-vF-pnm" firstAttribute="leading" secondItem="uj2-Du-B21" secondAttribute="leading" id="t0K-wW-IPi"/>
+                            <constraint firstItem="uj2-Du-B21" firstAttribute="trailing" secondItem="I6g-tP-w3E" secondAttribute="trailing" constant="20" id="tFb-l1-sg6"/>
                             <constraint firstItem="5Cj-VW-Lk5" firstAttribute="centerX" secondItem="4jj-Np-njX" secondAttribute="centerX" id="uLJ-vI-GMy"/>
                             <constraint firstItem="Z14-dU-OO0" firstAttribute="centerY" secondItem="QQX-xC-93k" secondAttribute="centerY" id="w8M-gE-8OQ"/>
                             <constraint firstItem="DEC-3D-Kxj" firstAttribute="centerX" secondItem="4jj-Np-njX" secondAttribute="centerX" constant="-26" id="wzg-9N-Iwc"/>
@@ -215,6 +222,10 @@
                         <viewLayoutGuide key="safeArea" id="uj2-Du-B21"/>
                     </view>
                     <connections>
+                        <outlet property="distanceLbl" destination="CtG-9L-UM6" id="Jhw-Nd-9HB"/>
+                        <outlet property="durationLbl" destination="fjB-ge-mrA" id="9jw-Rw-GPN"/>
+                        <outlet property="paceLbl" destination="2rz-XL-qkY" id="4Y3-KC-f6H"/>
+                        <outlet property="pauseBtn" destination="EOI-OV-S27" id="GZ1-qJ-jL1"/>
                         <outlet property="sliderImageView" destination="QyB-m4-HNe" id="BPT-PX-mJF"/>
                         <outlet property="swipeBGImageView" destination="DEC-3D-Kxj" id="rPi-ua-TjR"/>
                     </connections>
