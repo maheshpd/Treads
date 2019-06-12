@@ -12,17 +12,25 @@ import MapKit
 class BeginRunVC: LocationVC {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var lastRunCloseBtn: UIButton!
+    @IBOutlet weak var paceLbl: UILabel!
+    @IBOutlet weak var distanceLbl: UILabel!
+    @IBOutlet weak var durationLbl: UILabel!
+    @IBOutlet weak var lastRunBGView: UIView!
+    @IBOutlet weak var lastRunStack: UIStackView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationAuthStatus()
         mapView.delegate = self
-        print("here are my runs:\(Run.getAllRun())")
-       
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         manager?.delegate = self
         manager?.startUpdatingLocation()
+        getLastRun()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -33,6 +41,26 @@ class BeginRunVC: LocationVC {
         
     }
     
+    func getLastRun() {
+        guard let lastRun = Run.getAllRun()?.first else {
+            lastRunStack.isHidden = true
+            lastRunBGView.isHidden = true
+            lastRunCloseBtn.isHidden = true
+            return }
+        lastRunStack.isHidden = false
+        lastRunBGView.isHidden = false
+        lastRunCloseBtn.isHidden = false
+        paceLbl.text = lastRun.pace.formatTimeDurationToString()
+        distanceLbl.text = "\(lastRun.distance.metersToKm(place: 2)) km"
+        durationLbl.text = lastRun.duration.formatTimeDurationToString()
+    }
+    
+    
+    @IBAction func lastRunClosedBtnPressed(_ sender: UIButton) {
+        lastRunStack.isHidden = true
+        lastRunBGView.isHidden = true
+        lastRunCloseBtn.isHidden = true
+    }
 }
 
 
