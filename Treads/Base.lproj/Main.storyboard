@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mW2-28-LkQ">
-                                <rect key="frame" x="0.0" y="70" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="422"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If5-SM-uUu">
                                 <rect key="frame" x="168.5" y="28" width="38" height="22"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeZ-Pm-h8x">
-                                <rect key="frame" x="179.5" y="561" width="16" height="22"/>
+                                <rect key="frame" x="152" y="512" width="71" height="71"/>
                                 <state key="normal" image="startRunningButton"/>
                                 <connections>
                                     <segue destination="UFY-rK-vAD" kind="show" id="V3V-jU-hml"/>
@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-OI-Iot">
-                                <rect key="frame" x="353" y="464" width="16" height="22"/>
+                                <rect key="frame" x="311" y="415" width="58" height="58"/>
                                 <state key="normal" image="centerNavButton"/>
                                 <connections>
                                     <action selector="locationCenterBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="sQR-C2-zav"/>
@@ -262,7 +262,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RunLogCell" rowHeight="80" id="DXS-Sg-Pe8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RunLogCell" rowHeight="80" id="DXS-Sg-Pe8" customClass="RunLogCell" customModule="Treads" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXS-Sg-Pe8" id="D3p-6b-hwX">
@@ -313,21 +313,37 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-Qy-6mm">
+                                                    <rect key="frame" x="0.0" y="79" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Ox4-cj-rR2"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="fjW-Qy-6mm" secondAttribute="bottom" id="63Z-Je-iGJ"/>
                                                 <constraint firstItem="sXa-xV-7c6" firstAttribute="centerY" secondItem="D3p-6b-hwX" secondAttribute="centerY" id="6uw-IH-s2d"/>
                                                 <constraint firstItem="b8e-Vc-8Ey" firstAttribute="leading" secondItem="D3p-6b-hwX" secondAttribute="leading" id="EEs-fU-ds4"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gZR-2J-Lac" secondAttribute="trailing" constant="8" id="Jql-YY-s9t"/>
                                                 <constraint firstItem="c3b-z5-Xg6" firstAttribute="centerY" secondItem="D3p-6b-hwX" secondAttribute="centerY" id="NH2-lC-bEf"/>
                                                 <constraint firstItem="gZR-2J-Lac" firstAttribute="centerY" secondItem="D3p-6b-hwX" secondAttribute="centerY" id="Vbj-o3-ffZ"/>
+                                                <constraint firstItem="fjW-Qy-6mm" firstAttribute="leading" secondItem="D3p-6b-hwX" secondAttribute="leading" id="Y7e-6q-Gdi"/>
                                                 <constraint firstAttribute="trailing" secondItem="b8e-Vc-8Ey" secondAttribute="trailing" id="aZL-f1-sA4"/>
                                                 <constraint firstAttribute="bottom" secondItem="b8e-Vc-8Ey" secondAttribute="bottom" id="hDo-ds-MAE"/>
                                                 <constraint firstItem="c3b-z5-Xg6" firstAttribute="centerX" secondItem="D3p-6b-hwX" secondAttribute="centerX" id="jzK-Ar-Yjb"/>
                                                 <constraint firstItem="sXa-xV-7c6" firstAttribute="leading" secondItem="D3p-6b-hwX" secondAttribute="leadingMargin" constant="8" id="lYp-v8-mBX"/>
                                                 <constraint firstItem="b8e-Vc-8Ey" firstAttribute="top" secondItem="D3p-6b-hwX" secondAttribute="top" id="npV-pY-Hea"/>
+                                                <constraint firstAttribute="trailing" secondItem="fjW-Qy-6mm" secondAttribute="trailing" id="ovd-DS-a03"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="avegeragePaceLbl" destination="hap-Bq-X1P" id="z6l-AA-wY2"/>
+                                            <outlet property="dateLbl" destination="gZR-2J-Lac" id="U7A-6m-6ph"/>
+                                            <outlet property="runDurationLbl" destination="Icd-Gc-iTd" id="0Ru-aF-kYT"/>
+                                            <outlet property="totalDistanceLbl" destination="GCI-Q8-a9t" id="UY4-Cw-70T"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -348,6 +364,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Log" image="tabbar-myLogIconGray" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="Kif-oM-p60" id="pjQ-ho-6tU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
